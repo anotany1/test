@@ -10,6 +10,8 @@ using namespace Fract;
 void Fract::Something(Fraction f)
 {
 	std::cout<<"Something\n"<<f.intVar;
+	std::cout<<"Something\n"<<f.intVar;
+	
 	
 
 };
