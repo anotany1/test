@@ -1,30 +1,24 @@
 // Fraction.cpp : Defines the entry point for the console application.
-//
 
 #include "stdafx.h"
 #include "Fraction.h"
-
+#include "TemplateExample.h"
 
 using namespace Fract;
+using namespace std;
 
-void Fract::Something(Fraction f)
+void Fract::FriendExample(Fraction f)
 {
-	std::cout<<"Something\n"<<f.intVar;
-	std::cout<<"Something\n"<<f.intVar;
-	std::cout<<"Something\n"<<f.intVar;std::cout<<"Something\n"<<f.intVar;
-	
-};
-int _tmain(int argc, _TCHAR* argv[])
-{
-	Fraction fraction;
-	Something(fraction);
+	std::cout<<"Access to the private variable: intVar="<<f.intVar<<"\n";// intVar is private
 }
 
-
-
-int _tmain(int argc, _TCHAR* argv[])
+int main(int argc, _TCHAR* argv[])
 {
+	cout << "Friend function demo:\n";
 	Fraction fraction;
-	Something(fraction);
-}
+	FriendExample(fraction);
 
+	cout << "\nTemplate demo:\n";
+	TemplateExample<int> templ;
+	templ.print(11);
+}

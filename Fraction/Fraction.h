@@ -6,14 +6,13 @@ namespace Fract
 		int intVar;
 	public:
 		Fraction(void);
-		~Fraction(void);
-		friend void Something(Fraction f);	
+		friend void FriendExample(Fraction f);	
 	};
 
 	class Decimal
 	{
 	public:
-		friend void Something(Fraction f);	
+		friend void FriendExample(Fraction f);	
 	};
 
 	
